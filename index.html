@@ -11,6 +11,7 @@
         <a-scene embedded vr-mode-ui="enabled: false" arjs="debugUIEnabled: false;" cursor="rayOrigin: mouse" accepts-clicks; >
             <a-assets>
                 <a-asset-items id="robot" src="cooWithoutVR.gltf"></a-asset-items>
+                <a-asset-items id="CooWithVR" src="cooWithVR.gltf"></a-asset-items>
             </a-assets>
 
             <a-marker type="pattern" url="./pattern-WavingMarker.patt">
@@ -24,6 +25,9 @@
             </a-marker>
             <a-marker type="pattern" url="./pattern-Dance.patt">
                 <a-entity gltf-model="#robot" rotation="-90 0 0" position="0 0 0.5" scale="0.3 0.3 0.3" animation-mixer="clip: Floss Dance"></a-entity>
+            </a-marker>
+            <a-marker type="pattern" url="./pattern-VR.patt">
+                <a-entity gltf-model="#CooWithVR" rotation="-90 0 0" position="0 0 0.5" scale="0.3 0.3 0.3" animation-mixer="clip: VR"></a-entity>
             </a-marker>
             <a-entity camera></a-entity>
         </a-scene>
